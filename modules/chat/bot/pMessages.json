@@ -1,0 +1,116 @@
+{
+    "A00": {
+        "message": "Sample Text",
+        "code": "A00",
+        "input": true,
+        "shortmessage": "greet"
+    },
+
+    "A01": {
+        "message": "I'm a buyer",
+        "code": "A01",
+        "shortmessage": "buyer"
+    },
+    "A02": {
+        "message": "I'm a seller",
+        "code": "A02",
+        "shortmessage": "seller"
+    },
+    "A03": {
+        "message": "search",
+        "code": "A03",
+        "shortmessage": "search"
+    },
+    "A04": {
+        "message": "issue",
+        "code": "A04",
+        "shortmessage": "issue"
+    },
+    "A05": {
+        "message": "status",
+        "code": "A05",
+        "shortmessage": "status"
+    },
+    "A06": {
+        "message": "create",
+        "code": "A06",
+        "shortmessage": "create"
+    },
+    "A07": {
+        "message": "schedules",
+        "code": "A07",
+        "shortmessage": "schedules"
+    },
+    "A08": {
+        "message": "listings",
+        "code": "A08",
+        "input": true,
+        "shortmessage": "listings"
+    },
+    "A09": {
+        "message": "profiles",
+        "code": "A09",
+        "input": true,
+        "shortmessage": "profiles"
+    },
+    "A10": {
+        "message": "raise",
+        "code": "A10",
+        "shortmessage": "raise"
+    },
+    "A11": {
+        "message": "describe",
+        "code": "A11",
+        "shortmessage": "describe"
+    },
+    "A12": {
+        "message": "report",
+        "code": "A12",
+        "shortmessage": "report"
+    },
+    "A13": {
+        "message": "collaboration",
+        "code": "A13",
+        "shortmessage": "collaboration"
+    },
+    "A14": {
+        "message": "transaction",
+        "code": "A14",
+        "shortmessage": "transaction"
+    },
+    "A15": {
+        "message": "describe",
+        "code": "A15",
+        "shortmessage": "describe"
+    },
+    "A16": {
+        "message": "profile_describe",
+        "code": "A16",
+        "input": true,
+        "shortmessage": "profile_describe"
+    },
+    "A17": {
+        "message": "listing_describe",
+        "code": "A17",
+        "input": true,
+        "shortmessage": "listing_describe"
+    },
+    "A18": {
+        "message": "profiles",
+        "code": "A18",
+        "input": true,
+        "shortmessage": "profiles"
+    },
+    "A19": {
+        "message": "access",
+        "code": "A19",
+        "input": true,
+        "shortmessage": "access"
+    },
+    "A20": {
+        "message": "transactions",
+        "code": "A20",
+        "input": true,
+        "shortmessage": "transactions"
+    }
+}

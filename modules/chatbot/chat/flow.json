@@ -1,0 +1,54 @@
+{
+    "Greet": {
+
+        "member": {
+
+            "private": {
+                "gather"
+
+            },
+            "corporate": {
+
+            }
+        },
+        "artist": {
+
+            "tattoo/artist": {
+
+            },
+            "art/work": {
+
+            },
+            "body/modification": {
+
+            },
+            "performance/artist": {
+
+            },
+            "model": {
+
+            }
+        },
+        "provider": {
+
+            "business": {
+
+            },
+            "venue": {
+
+            },
+            "supplier": {
+
+            }
+        },
+        "transactions": {
+
+        },
+        "payments": {
+
+        },
+        "collaborations": {
+
+        }
+    }
+}

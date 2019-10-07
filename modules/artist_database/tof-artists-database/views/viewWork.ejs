@@ -1,0 +1,133 @@
+
+     <% include headerAdmin %>
+
+ <div class="container">
+         <div class="col-xl-3 col-lg-6">
+             <div class="card">
+                 <div class="card-body">
+                     <div class="stat-widget-one">
+                         <div class="stat-icon dib"><i class="ti-notepad text-success border-success"></i></div>
+                         <div class="stat-content dib">
+                             <div class="stat-text">Total Entries (Week)</div>
+                             <!-- <div class="stat-digit"></div> -->
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+ 
+ 
+         <div class="col-xl-3 col-lg-6">
+             <div class="card">
+                 <div class="card-body">
+                     <div class="stat-widget-one">
+                         <div class="stat-icon dib"><i class="ti-calendar text-primary border-primary"></i></div>
+                         <div class="stat-content dib">
+                             <div class="stat-text">Total Entries (Month)</div>
+                             <div class="stat-digit"></div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="col-xl-3 col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon dib"><i class="ti-view-list text-information border-primary"></i></div>
+                            <div class="stat-content dib">
+                                <div class="stat-text">Total Entries till now</div>
+                                <div class="stat-digit"><%= total %></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+ 
+ </div>
+ 
+ 
+ <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Data</strong>
+                        </div>
+                        <div class="card-body">
+                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                <thead>
+                                       
+                                    <tr>
+                                        <th>First Name</th>
+                                        <th>Middle Name</th>
+                                        <th>Last Name</th>
+                                        <th>Email</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <% for(var i=0; i < data.length; i++){ %>
+                                    <tr>
+                                
+                                        <td><%= data[i].firstName %></td>
+                                        <td><%= data[i].middletName %></td>
+                                        <td><%= data[i].lastName %></td>
+                                        <td><%= data[i].email %></td>
+                                        <td>
+                                            <a href="viewartist?id=<%= data[i]._id %>"><i class="fa fa-eye"></i></a>
+                                            <a href="editartist?id=<%= data[i]._id %>"><i class="fa fa-edit"></i></a>
+                                           
+                                            <a href="delete?id=<%= data[i]._id %>"><i class="fa fa-remove"></i></a>
+                                         
+                                        </td>
+                                    </tr>
+                                    <% } %>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- .animated -->
+    </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     <script src="vendors/jquery/dist/jquery.min.js"></script>
+     <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+ 
+     <script src="vendors/jquery-validation/dist/jquery.validate.min.js"></script>
+     <script src="vendors/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+ 
+     <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    
+     <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script src="assets/js/main.js"></script>
+
+     </body>
+ 
+     </html>

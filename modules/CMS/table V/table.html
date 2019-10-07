@@ -1,0 +1,164 @@
+<html>
+​
+<head>
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.25;
+            padding: 50px;
+            margin: 50px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+            width: 100%;
+            table-layout: fixed;
+        }
+        
+        thead {
+            background-color: #94C2ED;
+        }
+        
+        table caption {
+            font-size: 1.5em;
+            margin: .5em 0 .75em;
+        }
+        
+        table tr {
+            border: 1px solid #ddd;
+            padding: .35em;
+        }
+        
+        table th,
+        table td {
+            padding: .625em;
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+        }
+        
+        table th {
+            font-size: .85em;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+        
+        @media screen and (max-width: 600px) {
+            table {
+                border: 0;
+                border-radius: 25px;
+            }
+            table caption {
+                font-size: 1.3em;
+            }
+            table thead {
+                border: none;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+            table tr {
+                border-bottom: 3px solid #6DBCB6;
+                display: block;
+                margin-bottom: .625em;
+            }
+            table td {
+                border-bottom: 1px solid #ddd;
+                display: block;
+                font-size: .8em;
+                text-align: right;
+            }
+            table td::before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            table td:last-child {
+                border-bottom: 0;
+            }
+        }
+    </style>
+    <script>
+        $.ajax({
+                url: url,
+                data: updateReq,
+                type: "GET",
+                success: function(dd) {
+                    var table = document.getElementByID('table')
+                    dd.forEach(k => {
+                                var element = document.createElement('tr')
+                                element.innerHTML = '<td>' + k.name + '</td><td>' + k.mail + '</td><td>' + k.verified + "</td><td>" + k.createdON + "</td><td>" + k.type + '</td>'
+                                table.append(element)
+                            }
+                        },
+                        error: function(data) {
+                          console.log(data);
+                      }
+                });
+        }
+    </script>
+</head>
+​
+<body>
+    <table id="table">
+        <caption>table</caption>
+        <thead>
+            <tr>
+                <th scope="col">User Name</th>
+                <th scope="col">User Mail</th>
+                <th scope="col">User Verified</th>
+                <th scope="col">User Created On</th>
+                <th scope="col">User Type</th>
+​
+​
+​
+​
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="name">1</td>
+                <td data-label="Mail">2</td>
+                <td data-label="Verified">2</td>
+                <td data-label="Created">55</td>
+                <td data-label="Type">777</td>
+​
+            </tr>
+            <tr>
+                <td data-label="name">1</td>
+                <td data-label="Mail">2</td>
+                <td data-label="Verified">2</td>
+                <td data-label="Created">55</td>
+                <td data-label="Type">777</td>
+​
+            </tr>
+            <tr>
+                <td data-label="name">1</td>
+                <td data-label="Mail">2</td>
+                <td data-label="Verified">2</td>
+                <td data-label="Created">55</td>
+                <td data-label="Type">777</td>
+​
+            </tr>
+            <tr>
+                <td data-label="name">1</td>
+                <td data-label="Mail">2</td>
+                <td data-label="Verified">2</td>
+                <td data-label="Created">55</td>
+                <td data-label="Type">777</td>
+​
+            </tr>
+​
+        </tbody>
+    </table>
+​
+​
+</body>
+​
+</html>

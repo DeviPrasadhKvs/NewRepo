@@ -1,0 +1,28 @@
+<html>
+​
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+​
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.Jcrop.js"></script>
+    <script type="text/javascript">
+        function readURL(input) {
+            var path = (window.URL || window.webkitURL).createObjectURL(input.files[0]);
+            console.log('path', path);
+            $('#blah').attr('src', path).width(500)
+                .height(500);;
+​
+            $(function() {
+                $('#blah').Jcrop();
+            });
+        }
+    </script>
+</head>
+​
+<body>
+    <input type='file' id="imgInp" onchange="readURL(this)" />
+    <img id="blah" src="#" alt="your image" style="width:250px; height:250px;" />
+​
+</body>
+​
+</html>

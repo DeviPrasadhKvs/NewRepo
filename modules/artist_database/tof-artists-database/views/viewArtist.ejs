@@ -1,0 +1,182 @@
+<% include headerWorker %>
+
+
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Artist details</h1>
+                </div>
+               
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+
+
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="card">
+                        <div class="card-header"><strong>id : <%= data._id %></strong><small> </small></div>
+                        <div class="card-body card-block">
+                           <table align="center">
+                            <tr>
+                                <th align="left">IAM:</th>
+                                <td><%= data.iam %></td>
+                            </tr>
+                            <tr>
+                                <th align="left">Profile Type:</th>
+                                <td><%= data.profileType %></td>
+                            </tr>
+                            <tr>
+                                <th align="left">Gender:</th>
+                                <td><%= data.gender %></td>
+                            </tr>
+                            
+                                <tr>
+                                   <th align="left">First Name:</th>
+                                   <td><%= data.firstName %></td>
+                               </tr>
+                               <tr>
+                                    <th align="right">Middle Name:</th>
+                                    <td><%= data.middName %></td>
+                                </tr>
+                                <tr>
+                                   <th align="right">Last Name:</th>
+                                   <td><%= data.lastName %></td>
+                               </tr>
+                               <tr>
+                                    <th align="right">Email:</th>
+                                    <td><%= data.email %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">Contact Number:</th>
+                                        <td><%= data.contactNumber %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">Facebook:</th>
+                                        <td><%= data.facebook %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">Twitter:</th>
+                                        <td><%= data.twitter %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">Instagram:</th>
+                                        <td><%= data.instagram %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">City:</th>
+                                        <td><%= data.city %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">Country:</th>
+                                        <td><%= data.country %></td>
+                                </tr>
+                                <tr>
+                                    <th align="left">Geo Location:</th>
+                                    <td><%= data.geoLocation %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">Address:</th>
+                                        <td><%= data.address %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">Website:</th>
+                                        <td><%= data.website %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">title:</th>
+                                        <td><%= data.title %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">description:</th>
+                                        <td><%= data.description %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">pricePerHour:</th>
+                                        <td><%= data.pricePerHour %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">estimatedTime:</th>
+                                        <td><%= data.estimatedTime %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">Views:</th>
+                                        <td><%= data.views %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">from:</th>
+                                        <td><%= data.time.from %></td>
+                                </tr>
+                                <tr>
+                                        <th align="right">to:</th>
+                                        <td><%= data.time.to %></td>
+                                </tr>
+
+                           </table><hr>
+                           <h5 align="center">want to update details? <a href='/editartist?id=<%= data._id %>' class="btn btn-info rounded">click here</a></h5> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 
+            ">
+            <div class="card-header"><strong>Images</strong><small> </small></div>
+
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                         <div class="carousel-inner">
+                            <% var i = 1; %>
+                            <% files.forEach(function(file){   %> 
+                            <% if(i===1){ %>
+                                    <div class="carousel-item active">
+                            <img class="d-block w-100" src="/uploads/<%= data._id %>/<%= file %>" width="250px" height="400px" >
+                            </div>
+                           <% i = i+1 }else{ %>
+                                    <div class="carousel-item">
+                                    <img class="d-block w-100" src="/uploads/<%= data._id %>/<%= file %>" width="250px" height="400" >
+                                    </div>
+                           <% }   }); %>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        </div>
+            </div>
+
+            <div></div>
+        </div>
+        <!-- .animated -->
+    </div>
+    <!-- .content -->
+    </div>
+    <!-- /#right-panel -->
+    <!-- Right Panel -->
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="vendors/popper.js/dist/umd/popper.min.js"></script> -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+
+
+    </body>
+
+    </html>

@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="croppie.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="croppie.js"></script>
+</head>
+
+<body>
+    <button onclick="result()">Click Here</button>
+    <div class="demo"></div>
+    <input type='file' id="imgInp" onchange="readURL(this)" />
+
+    <img id="blah" src="#" alt="your image" style="width:250px; height:250px;" />
+    <div id="sample" style="width: 300px; height:300px; border:2px solid red; display: none;">
+
+    </div>
+    <script>
+        var a = null
+
+        function readURL(input) {
+            var path = (window.URL || window.webkitURL).createObjectURL(input.files[0]);
+            console.log('path', path);
+            $('#blah').attr('src', path)
+            a = $('#blah').croppie({
+                enableExif: true,
+                viewport: {
+                    width: 200,
+                    height: 200,
+                    type: 'circle'
+                },
+                boundary: {
+                    width: 300,
+                    height: 300
+                }
+            });
+
+
+        }
+
+        function result() {
+
+            var info = a.croppie('get');
+            var top_left_x = info.points[0];
+            var top_left_y = info.points[1];
+            var bottom_right_x = info.points[2];
+            var bottom_right_y = info.points[3];
+
+            var cropped_width = bottom_right_x - top_left_x;
+            var cropped_height = bottom_right_y - top_left_y;
+            a.croppie('result', {
+                type: 'base64',
+                size: {
+                    width: cropped_width,
+                    height: cropped_height
+                },
+                format: 'png'
+            }).then(function(r) {
+                document.getElementById('sample').style.display = 'block'
+                document.getElementById('sample').innerHTML = '<img src="' + r + '" style=\"width:300px; height:300px;\"/>'
+            });
+        }
+    </script>
+</body>
+
+</html>

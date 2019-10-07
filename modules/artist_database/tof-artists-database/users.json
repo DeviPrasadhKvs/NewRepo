@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5ceffda5cfaf761ed8365067"},"active":"true","email":"mani@gmail.com","password":"$2a$10$pQBIerKnKAvEHv.Gt/1cT.21mAoJWM2cDvU0EhOBOPoGFNOv39mUC","displayName":"Mani","gender":"Male","role":"worker","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5ceffdf5cfaf761ed8365068"},"active":"true","email":"mani_admin@gmail.com","password":"$2a$10$7XyS8LzZP4/Jk4V8D7B0heDEmCsfKceriLLwQph85msGByObsVWcG","displayName":"Mani_admin","gender":"Male","role":"admin","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5cfecae30ac4b52ed4bb198e"},"active":"true","email":"deviprasadh.kvs@theotherfruit.com","password":"$2a$10$VBWPYycDNt/xO0DvKv4mxOekVxuDw.eiH.pQaCfniIE38KOewvd5K","displayName":"Devi Prasadh","gender":"Male","role":"worker","__v":{"$numberInt":"0"}}

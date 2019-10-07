@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+    
+    /* #loading {
+    background: url('square.gif;') no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+} */
+
+    .loader {
+    	position: fixed;
+	    left: 0px;
+    	top: 0px;
+    	width: 100%;
+	    height: 100%;
+    	z-index: 9999;
+	    background: url('square.gif') 50% 50% no-repeat;
+    }
+    </style>
+
+    <script>
+        function hideLoader() {
+        $('#loading').hide();
+    }
+
+    $(window).ready(hideLoader);
+
+        // Strongly recommended: Hide loader after 20 seconds, even if the page hasn't finished loading
+        setTimeout(hideLoader, 20 * 1000);
+    </script>
+
+    <title>TOF® Articles</title>
+</head>
+<body style="margin: 0px; padding: 0px" >
+    <div id="loading" style="height:100vh; width:100%; overflow:hidden;">
+        <iframe width="100%" height="100%" style="border:0px none;" src="https://theotherfruit.com"></iframe>
+     </div>
+</body>
+</html>
+
+

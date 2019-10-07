@@ -1,0 +1,29 @@
+{
+    "A00": {
+        "code": "A00",
+        "shortmessage": "Howdy!!!",
+        "message": "Howdy, select an option"
+    },
+    "A01": {
+        "code": "A01",
+        "shortmessage": "I'm Buyer",
+        "message": "I'm a Buyer."
+    },
+    "A02": {
+        "code": "A02",
+        "shortmessage": "I'm Seller",
+        "message": "I'm a Seller."
+    },
+    "A03": {
+        "code": "A03",
+        "shortmessage": "Search",
+        "message": "Please enter your search data."
+
+    },
+    "A04": {
+        "code": "A04",
+        "shortmessage": "Issue",
+        "message": "Please enter your issue message, we will get back to you with a Resolution for your Query!",
+        "input": true
+    }
+}

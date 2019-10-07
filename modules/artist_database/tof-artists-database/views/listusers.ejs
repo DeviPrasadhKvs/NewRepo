@@ -1,0 +1,107 @@
+<% include headerAdmin %>
+
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Users List</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="page-header float-right">
+                <div class="page-title">
+                    <ol class="breadcrumb text-right">
+                        <!-- <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Table</a></li>
+                        <li class="active">Data table</li> -->
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Data</strong>
+                        </div>
+                        <div class="card-body">
+                            <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Email</th>
+                                        <th>Password</th>
+                                        <th>Diaplay Name</th>
+                                        <th>Role</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <% for(var i=0; i < data.length; i++){ %>
+                                    <tr>
+
+                                        <td><%= data[i].email %></td>
+                                        <td><%= data[i].password %></td>
+                                        <td><%= data[i].displayName %></td>
+                                        <td><%= data[i].role %></td>
+                                        <% if(data[i].active === "true"){%>
+                                        <td>Active</td>
+                                        <%}else{%>
+                                        <td>Inactive</td>
+                                        <%}%>
+                                        <td>
+                                                <% if(data[i].active === "true"){%>
+                                            <a href="deactiveuser?email=<%= data[i].email %>"><i class="btn btn-danger rounded" >Deactivate </i></a>
+                                            <%}else{%>
+                                            <a href="activeuser?email=<%= data[i].email %>"><i class="btn btn-success rounded" > Activate </i></a>
+                                            <%}%>
+                                            <a href="workdetails?email=<%= data[i].email %>" class="btn btn-primary rounded">View work</a>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- .animated -->
+    </div>
+    <!-- .content -->
+
+
+    </div>
+    <!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="vendors/popper.js/dist/umd/popper.min.js"></script> -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+
+
+    </body>
+
+    </html>

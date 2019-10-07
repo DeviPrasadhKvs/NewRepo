@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Verification</h1>
+    <input type="text" name="name" id="identification">
+    <input type="text" id="profileId"></div>
+    <button onclick="details()">Get Identification Details</button><br>
+    <button onclick="approve()">Approve Identification</button><br>
+    <button onclick="reject()">Reject Identification</button><br>
+    <button onclick="getUnverifiedProfiles()">Get Unverified Profiles</button><br>
+    <script>
+        function details() {
+            // var name = document.getElementById('identification').value
+            var id = document.getElementById('profileId').value
+
+            $.ajax({
+                url: "https://seedbank.theotherfruit.io/getIdentificationDetails",
+                data: {
+                    'name': name
+
+                },
+                type: 'GET',
+                success: function(resp) {
+                    alert(resp);
+                },
+                error: function(e) {
+                    alert('Error: ' + e);
+                }
+            });
+        }
+
+        function approve() {
+            // var name = document.getElementById('identification').value
+            var id = document.getElementById('profileId').value
+
+            $.ajax({
+                url: "https://seedbank.theotherfruit.io/approveIdentification" + id,
+                data: {
+                    'name': name
+                },
+                type: 'GET',
+                success: function(resp) {
+                    alert(resp);
+                },
+                error: function(e) {
+                    alert('Error: ' + e);
+                }
+            });
+        }
+
+        function reject() {
+            // var name = document.getElementById('identification').value
+            var id = document.getElementById('profileId').value
+
+            $.ajax({
+                url: "https://seedbank.theotherfruit.io/rejectIdentification" + id,
+                type: 'GET',
+                success: function(resp) {
+                    alert(resp);
+                },
+                error: function(e) {
+                    alert('Error: ' + e);
+                }
+            });
+        }
+
+        function getUnverifiedProfiles() {
+            console.log('demo');
+
+            // var name = document.getElementById('identification').value
+            var id = document.getElementById('profileId').value
+
+            $.ajax({
+                url: "https://seedbank.theotherfruit.io/getUnverifiedProfiles",
+                type: 'GET',
+                success: function(resp) {
+                    console.log(resp);
+                },
+                error: function(e) {
+                    alert('Error: ' + e);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

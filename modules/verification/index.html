@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script>
+        function image() {
+            var id = document.getElementById('imgid').value
+            var profileId = document.getElementById('profileId').value
+
+            $.ajax({
+                url: 'http://localhost:4050/getIdentificationDetails/' + profileId,
+                type: "GET",
+                success: function(d) {
+                    if (d) {
+                        document.getElementById('img').src = d.profileImage
+                        document.getElementById('imgid').value = d.profileId
+
+                    }
+                },
+                error: function(data) {
+                    console.log(data)
+                }
+            });
+        }
+
+        function unverified() {
+            var id = document.getElementById('imgid').value
+            var profileId = document.getElementById('profileId').value
+
+            $.ajax({
+                url: 'http://localhost:4050/approveIdentification/' + id,
+                type: "GET",
+                success: function(d) {
+                    if (d) {
+                        document.getElementById('img').src = d.profileImage
+                        document.getElementById('imgid').value = d.profileId
+
+                    }
+                },
+                error: function(data) {
+                    console.log(data)
+                }
+            });
+        }
+
+        function accept() {
+            var id = document.getElementById('imgid').value
+
+            $.ajax({
+                url: 'http://localhost:4050/accept/' + id,
+                type: "GET",
+                success: function(d) {
+                    alert(d.code)
+                },
+                error: function(data) {
+                    console.log(data)
+                }
+            });
+        }
+
+        function reject() {
+            var id = document.getElementById('imgid').value
+
+            $.ajax({
+                url: 'http://localhost:4050/reject/' + id,
+                type: "GET",
+                success: function(d) {
+                    alert(d.code)
+
+                },
+                error: function(data) {
+                    console.log(data)
+                }
+            });
+        }
+    </script>
+
+
+
+    <style>
+        .inp {
+            width: 600px;
+            padding: 20px 20px;
+            margin: 10px 10px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 22px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            max-width: 200px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 10px;
+            margin: 10px 10px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <center><br><br>
+        <h2>ID Verification</h2><br><br>
+    </center>
+    <img src="./The-Hong-Kong-Smog-Filled-Skyline---China-To-Announce-Official-Blockchain-Regulations-2019---The-Other-Fruit-Biosphere---Making-Choice-Personal---HUMATION---RWSC.jpg" id="img">
+    <input type="text" id="imgid"></div>
+    <input type="text" id="profileId"></div>
+    <button onclick="image()">fetch</button>
+    <button onclick="accept()">Approve</button>
+    <button onclick="reject()">Reject</button>
+    <button onclick="unverified()">UnVerified</button>
+</body>
+
+</html>

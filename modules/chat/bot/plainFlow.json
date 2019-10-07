@@ -1,0 +1,18 @@
+{
+    "greet": ["&buyer", "&seller"],
+    "buyer": ["&search", "&issue", "&status"],
+    "seller": ["&create", "&schedules"],
+    "search": ["&listing", "&profile"],
+    "issue": ["&raise", "&status", "&describe"],
+    "status": ["&ticket!"],
+    "create": [""],
+    "schedules": ["$calender"],
+    "listing": ["$listings"],
+    "profile": ["$profiles"],
+    "raise": ["&report", "&collaboration", "&transaction", "&access"],
+    "describe": ["&details!"],
+    "report": ["&profile!_describe!", "&listing!_describe!"],
+    "collaboration": ["&launch", "&raise"],
+    "transaction": ["&transaction!"],
+    "launch": ["$flow#"]
+}

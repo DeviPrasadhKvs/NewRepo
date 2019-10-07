@@ -1,0 +1,28 @@
+{
+    "AO0": {
+        "code": "AO0",
+        "shortmessage": "Howdy!!!",
+        "message": "Howdy, select a option"
+    },
+    "AO1": {
+        "code": "AO1",
+        "shortmessage": "Buyer",
+        "message": "I'am Buyer."
+    },
+    "AO2": {
+        "code": "AO2",
+        "shortmessage": "Seller",
+        "message": "I'am Seller."
+    },
+    "AO3": {
+        "code": "AO3",
+        "shortmessage": "Search",
+        "message": "please enter your search data.",
+        "input": true
+    },
+    "AO4": {
+        "code": "AO4",
+        "shortmessage": "Issue",
+        "message": "please enter your issue message, we will get back"
+    }
+}

@@ -1,0 +1,213 @@
+{"_id":
+    {  
+       "username":"John Jacobs",
+       "user_email":"john.jacobs@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"21-Jan-2019",
+       "user_type":"Artist"
+    },
+
+    {  
+       "username":"Aiden Smith",
+       "user_email":"smith.aiden@gmail.com",
+       "user_verified":"yes",
+       "created_on":"04-Jan-2019",
+       "user_type":"Member"
+    },
+    {  
+       "username":"Annie Carlson",
+       "user_email":"carlson425@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"01-Jun-2019",
+       "user_type":"Member"
+    },
+    {  
+       "username":"Caleb Hardy",
+       "user_email":"caleb25@hotmail.com",
+       "user_verified":"no",
+       "created_on":"11-Aug-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"Cody Chris",
+       "user_email":"codyart@gmail.com",
+       "user_verified":"yes",
+       "created_on":"16-Apr-2019",
+       "user_type":"Member"
+    },
+    {  
+       "username":"Ethan Ed",
+       "user_email":"ed9371@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"20-Mar-2019",
+       "user_type":"Provider"
+    },
+    {  
+       "username":"James Carl",
+       "user_email":"Cjames789@email.com",
+       "user_verified":"no",
+       "created_on":"10-Aug-2019",
+       "user_type":"Member"
+    },
+    {  
+       "username":"Annie Carlson",
+       "user_email":"carlson425@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"01-Jun-2019",
+       "user_type":"Member"
+    },
+    {  
+       "username":"Jay Harold",
+       "user_email":"haroldsart@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"04-May-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"Dave Smith",
+       "user_email":"smith.dve78@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"29-Jul-2019",
+       "user_type":"Provider"
+    },
+    {  
+       "username":"Jay Skiller",
+       "user_email":"skillerart@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"28-Feb-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"John Hermond",
+       "user_email":"hermondstattoo@hotmail.com",
+       "user_verified":"no",
+       "created_on":"19-Jul-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"Max Denver",
+       "user_email":"max.denver85@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"27-Feb-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"Nancy",
+       "user_email":"nancy7964@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"28-Feb-2019",
+       "user_type":"Member"
+    },
+    {  
+       "username":"Richard Parker",
+       "user_email":"richparker246@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"28-Mar-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"Ryan Clancy",
+       "user_email":"ryanclan280@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"08-Feb-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"Harry Smith",
+       "user_email":"harry6480@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"06-Jul-2019",
+       "user_type":"Provider"
+    },
+    {  
+       "username":"Sarah Williams",
+       "user_email":"sarahwilliams@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"15-Mar-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"Susie Walker",
+       "user_email":"susiesuart@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"13-Apr-2019",
+       "user_type":"Member"
+    },
+    {  
+       "username":"Thomas Anderson",
+       "user_email":"Thomas766@hotmail.com",
+       "user_verified":"no",
+       "created_on":"15-Jul-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"John Smith",
+       "user_email":"johnsmith@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"09-Apr-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"Clint Barton",
+       "user_email":"clint234@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"20-Jun-2019",
+       "user_type":"Member"
+    },
+    {  
+       "username":"Scarlet Witch",
+       "user_email":"romanoff@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"15-Mar-2019",
+       "user_type":"Member"
+    },
+    {  
+       "username":"Nancy Walker",
+       "user_email":"nancy@hotmail.com",
+       "user_verified":"no",
+       "created_on":"15-Jul-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"James Carlson",
+       "user_email":"james756@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"10-Mar-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"Chris Johnson",
+       "user_email":"chris@hotmail.com",
+       "user_verified":"no",
+       "created_on":"15-Jul-2019",
+       "user_type":"Provider"
+    },
+    {  
+       "username":"Caleb Hardy",
+       "user_email":"caleb@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"22-Jun-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"Steven Jack",
+       "user_email":"jack@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"10-Mar-2019",
+       "user_type":"Artist"
+    },
+    {  
+       "username":"Stefen Robert",
+       "user_email":"stefen@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"14-Mar-2019",
+       "user_type":"Member"
+    },
+    {  
+       "username":"Alexis",
+       "user_email":"alexis895@hotmail.com",
+       "user_verified":"yes",
+       "created_on":"30-May-2019",
+       "user_type":"Artist"
+    }
+ }

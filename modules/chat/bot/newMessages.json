@@ -1,0 +1,163 @@
+{
+    "A00": {
+        "message": "Sample Text",
+        "code": "A00",
+        "shortmessage": "Hey there! Welcome to the TOF Support. Help us knowing who are you?"
+    },
+
+    "A01": {
+        "message": "I'm a buyer",
+        "code": "A01",
+        "shortmessage": "I'm a Buyer"
+    },
+    "A02": {
+        "message": "I'm a seller",
+        "code": "A02",
+        "shortmessage": "I'm a Seller"
+    },
+    "A03": {
+        "message": "I would like to search for a Profile",
+        "code": "A03",
+        "shortmessage": "I would like to search for a Profile"
+    },
+    "A04": {
+        "message": "I would like to report/block a Profile",
+        "code": "A04",
+        "shortmessage": "I would like to report/block a Profile"
+    },
+    "A05": {
+        "message": "I would like to know the status of my transaction",
+        "code": "A05",
+        "shortmessage": "I would like to know the status of my transaction"
+    },
+    "A06": {
+        "message": "I would like to update my future schedulings",
+        "code": "A06",
+        "shortmessage": "I would like to update my future schedulings"
+    },
+    "A07": {
+        "message": "I would like to post an update on my profile",
+        "code": "A07",
+        "shortmessage": "I would like to post an update on my profile"
+    },
+    "A08": {
+        "message": "Search Profile <input from user>",
+        "code": "A08",
+        "shortmessage": "Search option <input from user>"
+    },
+    "A09": {
+        "message": "Report on a profile",
+        "code": "A09",
+        "shortmessage": "Report on a Profile"
+    },
+    "A10": {
+        "message": "Block a profile",
+        "code": "A10",
+        "shortmessage": "Block a profile"
+    },
+    "A11": {
+        "message": "I have a pending transaction",
+        "code": "A11",
+        "shortmessage": "I have a pending transaction"
+    },
+    "A12": {
+        "message": "My transaction is successful but seeking for an Invoice/Receipt",
+        "code": "A12",
+        "shortmessage": "My transaction is successful but seeking for an Invoice/Receipt"
+    },
+    "A13": {
+        "message": "Schedules",
+        "code": "A13",
+        "shortmessage": "Schedules"
+    },
+    "A14": {
+        "message": "Calender",
+        "code": "A14",
+        "shortmessage": "Calender"
+    },
+    "A15": {
+        "message": "Open the Profile",
+        "code": "A15",
+        "shortmessage": "Open the Profile"
+    },
+    "A16": {
+        "message": "Profile search <input from user>",
+        "code": "A16",
+        "shortmessage": "Profile search <input from user>"
+    },
+    "A17": {
+        "message": "Profile search <input from user>",
+        "code": "A17",
+        "shortmessage": "Profile search <input from user>"
+    },
+    "A18": {
+        "message": "Enter the Transaction ID <input from user>",
+        "code": "A18",
+        "shortmessage": "Enter the Transaction ID <input from user>"
+    },
+    "A19": {
+        "message": "Invoice",
+        "code": "A19",
+        "shortmessage": "Invoice"
+    },
+    "A20": {
+        "message": "Receipt",
+        "code": "A20",
+        "shortmessage": "Receipt"
+    },
+    "A21": {
+        "message": "Amount has been debited but, still it shows a Pending status",
+        "code": "A21",
+        "shortmessage": "Amount has been debited but, still it shows a Pending status"
+    },
+    "A22": {
+        "message": "Amount has been debited as well as the transaction was failed",
+        "code": "A22",
+        "shortmessage": "Amount has been debited as well as the transaction was failed"
+    },
+    "A23": {
+        "message": "Invoice of the Previous Transaction",
+        "code": "A23",
+        "shortmessage": "Invoice of the Previous Transaction"
+    },
+    "A24": {
+        "message": "Invoice of the Previous two Transactionss",
+        "code": "A24",
+        "shortmessage": "Invoice of the Previous two Transactions"
+    },
+    "A25": {
+        "message": "Invoice of the Previous three Transactions",
+        "code": "A25",
+        "shortmessage": "Invoice of the Previous three Transactions"
+    },
+    "A26": {
+        "message": "Enter a specific transaction",
+        "code": "A26",
+        "shortmessage": "Enter a specific transaction"
+    },
+    "A27": {
+        "message": "Receipt of the Previous Transaction",
+        "code": "A27",
+        "shortmessage": "Receipt of the Previous Transaction"
+    },
+    "A28": {
+        "message": "Receipt of the Previous two Transaction",
+        "code": "A28",
+        "shortmessage": "Receipt of the Previous two Transactions"
+    },
+    "A29": {
+        "message": "Receipt of the Previous three Transactions",
+        "code": "A29",
+        "shortmessage": "Receipt of the Previous three Transactions"
+    },
+    "A30": {
+        "message": "Enter a specific transaction",
+        "code": "A30",
+        "shortmessage": "Enter a specific transaction"
+    },
+    "A31": {
+        "message": "Retreived Data",
+        "code": "A31",
+        "shortmessage": "Retreived Data"
+    }
+}

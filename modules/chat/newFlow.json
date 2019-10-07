@@ -1,0 +1,28 @@
+{
+    "buyer": {
+        "issue": {
+            "raise": {
+                "report": {
+                    "profile_describe": {
+                        "$": ["profileID", "describe"]
+                    }
+                },
+                "A06": {
+                    "AO7": {
+                        "AO8": {
+                            "$": ["collaborationID", "describe"]
+                        },
+                        "status": {
+                            "$": ["collaborationID"]
+                        }
+                    }
+                }
+            }
+        },
+        "seller": {
+            "report": {
+
+            }
+        }
+    }
+}

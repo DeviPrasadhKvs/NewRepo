@@ -1,0 +1,242 @@
+<% include headerAdmin %>
+
+
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Edit User</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+
+
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-header"><strong>Email : </strong><small> <%= data.email %></small></div>
+                        <div class="card-body card-block">
+                            <form action="/updateartist" method="POST" name="artistForm" >
+                                <input type="text" name="id" id="id" value="<%= data._id %>" hidden>
+                                <div class="form-group">
+                                    <label for="ima">I'M A...</label>
+                                    <select name="ima" id="ima" class="form-control">
+                                        <option value="<%= data.iam %>" selected><%= data.iam %></option>
+                                        <option value="member">Member</option>
+                                        <option value="artist">Artist</option>
+                                        <option value="provider">Provider</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="type">profile type</label>
+                                      <select name="type" id="type" class="form-control">
+                                          <option value="<%= data.profileType %>" selected><%= data.profileType %></option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gender" class=" form-control-label">Gender</label>
+                                        <select name="gender" id="gender" class="form-control">
+                                                <option value="<%= data.gender %>" selected><%= data.gender %></option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">other</option>
+                                            </select>
+                                    </div> 
+                                <div class="form-group">
+                                    <label for="First Name" class=" form-control-label">First Name</label>
+                                    <input type="text" id="firstName" placeholder="Enter artist first name" name="firstName" value="<%= data.firstName %>" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Middle Name" class=" form-control-label">Middle Name</label>
+                                    <input type="text" id="middleName" placeholder="Enter artist middle name" name="middleName" value="<%= data.middleName %>" class="form-control" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="Last Name" class=" form-control-label">Last Name</label>
+                                    <input type="text" id="lastName" placeholder="Enter artist last name" name="lastName" value="<%= data.lastName %>" class="form-control" required>
+                                </div>
+                                  <div class="form-group">
+                                       <label for="email" class=" form-control-label">Email</label>
+                                       <input type="email" id="email" placeholder="Enter artist mail" name="email" value="<%= data.email %>" class="form-control" >
+                                   </div>
+                                 <div class="form-group">
+                                        <label for="contact-number" class=" form-control-label">Contact Number</label>
+                                        <input type="text" id="contact-number" placeholder="contact number" name="contactNumber" value="<%= data.contactNumber %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="website" class=" form-control-label">Website</label>
+                                        <input type="url" id="website" placeholder="Website address" name="website" value="<%= data.website %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="facebook" class=" form-control-label">Facebook</label>
+                                        <input type="text" id="facebook" placeholder="facebook address" name="facebook" value="<%= data.facebook %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="twitter" class=" form-control-label">Twitter</label>
+                                        <input type="text" id="twitter" placeholder="twitter address" name="twitter" value="<%= data.twitter %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="instagram" class=" form-control-label">Instagram</label>
+                                        <input type="text" id="instagram" placeholder="instagram address" name="instagram" value="<%= data.instagram %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city" class=" form-control-label">City</label>
+                                        <input type="text" id="city" placeholder="enter artist city" name="city" value="<%= data.city %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="country" class=" form-control-label">Country</label>
+                                        <input type="text" id="country" placeholder="enter artist country " name="country" value="<%= data.country %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="geoLocation" class=" form-control-label">Geo Location <small>pin the location in the map below</small></label>
+                                        <input type="text" id="geoLocation" placeholder="pin the location in the map below" name="geoLocation" value="<%= data.geoLocation %>" class="form-control">
+                                        <div id="mapid" style="width: 500px; height: 400px;"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address" class=" form-control-label">Address</label>
+                                        <input type="text" id="address" placeholder="enter artist address" name="address" value="<%= data.address %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                    <input type="submit"  name="submit" class="btn btn-primary form-control rounded">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+        <!-- .animated -->
+    </div>
+    <!-- .content -->
+    </div>
+    <!-- /#right-panel -->
+    <!-- Right Panel -->
+
+
+
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+   
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+
+    <script>
+            jQuery(document).ready(function() {
+                    jQuery("#ima").change(function() {
+                        
+                        var el = jQuery(this) ;
+                    
+                        if(el.val() === "member" ) {
+                        jQuery("#type option").remove();
+                        jQuery("#type").append("<option selected disabled>--please select--</option>");
+                        jQuery("#type").append("<option value='private'>PRIVATE</option>");
+                        jQuery("#type").append("<option value='corporate'>CORPORATE</option>");
+                        }
+                        else if(el.val() === "artist" ) {
+                            jQuery("#type option").remove();
+                            jQuery("#type").append("<option>--please select--</option>"); 
+                            jQuery("#type").append("<option value='tattoo/artist'>TATTOO/ARTIST</option>");
+                            jQuery("#type").append("<option value='art/work'>ART/WORK</option>");
+                            jQuery("#type").append("<option value='body/modification'>BODY/MODIFICATION</option>");
+                            jQuery("#type").append("<option value='performance/artist'>PERFORMANCE/ARTIST</option>");
+                            jQuery("#type").append("<option value='model'>MODEL</option>");
+                        }
+                        else if(el.val() === "provider" ) {
+                        jQuery("#type option").remove();
+                        jQuery("#type").append("<option selected disabled>--please select--</option>");
+                        jQuery("#type").append("<option value='business'>BUSINESS</option>");
+                        jQuery("#type").append("<option value='venue'>VENUE</option>");
+                        jQuery("#type").append("<option value='supplier'>SUPPLIER </option>");
+                        }
+                    });
+        
+        
+                        var loca = <%- JSON.stringify(data) %> ;
+                        var loc = loca['geoLocation'];
+                        //alert('hai');
+                          var mymap = L.map('mapid').setView([0,0], 2);
+              
+                          L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                              maxZoom: 18,
+                              minZoom: 2,
+              
+                              id: 'mapbox.streets'
+                          }).addTo(mymap);
+              
+                          var popup = L.popup();
+                          //var locationn;
+                          
+                          var splitedLocation = loc.split(",");
+                          
+                          var theMarker= L.marker([loc[0], loc[1]]).addTo(mymap).bindPopup();
+              
+                          function onMapClick(e) {
+              
+                              lat = e.latlng.lat;
+                              lon = e.latlng.lng;
+              
+                              if (theMarker != undefined) {
+                                  mymap.removeLayer(theMarker);
+                              };
+                              /// mymap.removeLayer(theMarker);
+              
+                              theMarker = L.marker([lat, lon]).addTo(mymap).bindPopup();
+              
+                              jQuery('#geoLocation').val(lat + "," + lon);
+                              // $('#longitude').val(lon);
+              
+                          }
+              
+              
+                          mymap.on('click', onMapClick);
+              
+        
+        
+        
+                      });
+                //   function mani(){
+                //             country = jQuery("#country").val();
+                //       jQuery.ajax({
+                //           urlString = "http://localhost:3000/getgeolocation?city="+country+"";
+                //             type: 'GET' // added,
+                //             url: urlString,
+                //             data: {}
+                //             success: function (data) {
+                //                 console.log(data);
+                //                 // var ret = jQuery.parseJSON(data);
+                //                 // $('#lblResponse').html(ret.msg);
+                //                 alert(data);
+                //             },
+                //             error: function (xhr, status, error) {
+                //                 console.log('Error: ' + error.message);
+                //                 //$('#lblResponse').html('Error connecting to the server.');
+                //             }
+                //         });
+                //   }
+                  </script>
+        
+    </body>
+
+    </html>

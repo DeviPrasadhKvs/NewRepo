@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5d5a8bda1c9d440000d344b9"},"username":"Aiden Smith","user_email":"smith.aiden@gmail.com","user_verified":"yes","created_on":"04-Jan-2019","user_type":"Member"}
+{"_id":{"$oid":"5d5a8dd21c9d440000d344ba"},"username":"John Jacobs","user_email":"john.jacobs@hotmail.com","user_verified":"yes","created_on":"21-Jan-2019","user_type":"Artist"}
+{"_id":{"$oid":"5d5a8ee21c9d440000d344bb"},"username":"Annie Carlson","user_email":"carlson425@hotmail.com","user_verified":"yes","created_on":"01-Jun-2019","user_type":"Member"}
+{"_id":{"$oid":"5d5a8f0e1c9d440000d344bc"},"username":"Caleb Hardy","user_email":"caleb25@hotmail.com","user_verified":"no","created_on":"11-Aug-2019","user_type":"Artist"}
+{"_id":{"$oid":"5d5a8f4e1c9d440000d344bd"},"username":"Cody Chris","user_email":"codyart@gmail.com","user_verified":"yes","created_on":"16-Apr-2019","user_type":"Member"}

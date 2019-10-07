@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function addChildNode(){
+            var node = document.getElementById('child').innerHTML;
+            node = node + "<div id='child'><center><tr><td><h3>Child : </td><td></td><input type='text' size=25 placeholder='Child Node' width='20' height='20'</td></tr></center></div>"
+
+            document.getElementById('child').innerHTML=node;
+        }
+        </script>
+    </head>
+    <body>
+        <form action="form.html"> 
+        <br><br><br><br><br><br>
+        <center>
+            <tr><td><h3>Parent : </td><td><input type="text" name=name size=25 placeholder="Parent Node" width="20" height="20"</td></tr></center>
+
+            <div id="child">
+            <center><tr><td><h3>Child : </td><td></td><input type="text" size=25 placeholder="Child Node" width="20" height="20"</td></tr>
+            </center>
+            <br></div>
+            
+            <center><tr><td><button onclick="addChildNode()">Click Here to Add a new Child</button></td></tr></center>
+            
+            <br>
+            <center><tr><td><input type=submit value="  Submit  " name="save"></td></td></tr></tr></center>
+        
+        </tr>
+        </form>
+        </body>
+</html>

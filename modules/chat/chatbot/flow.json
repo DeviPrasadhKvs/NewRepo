@@ -1,0 +1,7 @@
+{
+    "AO0": ["AO1", "AO2"],
+    "AO1": ["AO3"],
+    "AO2": ["AO4"],
+    "AO3": "SEARCH ON PROFILES WITH {{data}}",
+    "AO4": "RAISE ISSUE WITH {{data}}"
+}

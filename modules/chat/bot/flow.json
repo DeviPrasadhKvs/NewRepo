@@ -1,0 +1,7 @@
+{
+    "A00": ["A01", "A02"],
+    "A01": ["A03"],
+    "A02": ["A04"],
+    "A03": "Search on profiles with {{data}}",
+    "A04": "Raise issue with {{data}}"
+}

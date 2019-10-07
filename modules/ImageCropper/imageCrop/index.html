@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="croppie.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="croppie.js"></script>
+</head>
+
+<body>
+    <div class="demo"></div>
+    <input type='file' id="imgInp" onchange="readURL(this)" />
+    <img id="blah" src="#" alt="your image" style="width:250px; height:250px;" />
+    <script>
+        function readURL(input) {
+            var path = (window.URL || window.webkitURL).createObjectURL(input.files[0]);
+            console.log('path', path);
+            $('#blah').attr('src', path)
+            $('#blah').croppie({
+                enableExif: true,
+                viewport: {
+                    width: 200,
+                    height: 200,
+                    type: 'circle'
+                },
+                boundary: {
+                    width: 300,
+                    height: 300
+                }
+            });
+
+        }
+    </script>
+</body>
+
+</html>

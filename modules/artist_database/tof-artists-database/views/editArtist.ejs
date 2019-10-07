@@ -1,0 +1,312 @@
+<% include headerWorker %>
+
+
+    <div class="breadcrumbs">
+        <div class="col-sm-4">
+            <div class="page-header float-left">
+                <div class="page-title">
+                    <h1>Edit artist</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+
+
+            <div class="row">
+
+                <div class="col-lg-7">
+                    <div class="card">
+                        <div class="card-header"><strong>Id : </strong><small> <%= data._id %></small></div>
+                        <div class="card-body card-block">
+                            <form action="/updateartist" method="POST"   >
+                                <input type="text" name="id" id="id" value="<%= data._id %>" hidden>
+                                <div class="form-group">
+                                    <label for="ima">I'M A...</label>
+                                    <select name="ima" id="ima" class="form-control">
+                                        <option value="<%= data.iam %>" selected><%= data.iam %></option>
+                                        <option value="member">Member</option>
+                                        <option value="artist">Artist</option>
+                                        <option value="provider">Provider</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="type">profile type</label>
+                                      <select name="type" id="type" class="form-control">
+                                          <option value="<%= data.profileType %>" selected><%= data.profileType %></option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gender" class=" form-control-label">Gender</label>
+                                        <select name="gender" id="gender" class="form-control">
+                                                <option value="<%= data.gender %>" selected><%= data.gender %></option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">other</option>
+                                            </select>
+                                    </div>
+                                <div class="form-group">
+                                    <label for="First Name" class=" form-control-label">First Name</label>
+                                    <input type="text" id="firstName" placeholder="Enter artist first name" name="firstName" value="<%= data.firstName %>" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Middle Name" class=" form-control-label">Middle Name</label>
+                                    <input type="text" id="middleName" placeholder="Enter artist middle name" name="middleName" value="<%= data.middleName %>" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Last Name" class=" form-control-label">Last Name</label>
+                                    <input type="text" id="lastName" placeholder="Enter artist last name" name="lastName" value="<%= data.lastName %>" class="form-control" required>
+                                </div>
+                                  <div class="form-group">
+                                       <label for="email" class=" form-control-label">Email</label>
+                                       <input type="email" id="email" placeholder="Enter artist mail" name="email" value="<%= data.email %>" class="form-control" >
+                                   </div>
+                                 <div class="form-group">
+                                        <label for="contact-number" class=" form-control-label">Contact Number</label>
+                                        <input type="text" id="contact-number" placeholder="contact number" name="contactNumber" value="<%= data.contactNumber %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="website" class=" form-control-label">Website</label>
+                                        <input type="url" id="website" placeholder="Website address" name="website" value="<%= data.website %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="facebook" class=" form-control-label">Facebook</label>
+                                        <input type="text" id="facebook" placeholder="facebook address" name="facebook" value="<%= data.facebook %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="twitter" class=" form-control-label">Twitter</label>
+                                        <input type="text" id="twitter" placeholder="twitter address" name="twitter" value="<%= data.twitter %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="instagram" class=" form-control-label">Instagram</label>
+                                        <input type="text" id="instagram" placeholder="instagram address" name="instagram" value="<%= data.instagram %>" class="form-control">
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="country" class=" form-control-label">Country</label>
+                                        <input type="text" id="country" placeholder="enter artist country " name="country" value="<%= data.country %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city" class=" form-control-label">City</label>
+                                        <input type="text" id="city" placeholder="enter artist city" name="city" value="<%= data.city %>" class="form-control">
+                                    </div>
+                                   <div class="form-group">
+                                        <label for="address" class=" form-control-label">Address</label>
+                                        <input type="text" id="address" placeholder="enter artist address" name="address" value="<%= data.address %>" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="geoLocation" class=" form-control-label">Geo Location <small>pin the location in the map below</small></label>
+                                        <input type="text" id="geoLocation" placeholder="pin the location in the map below" name="geoLocation" value="<%= data.geoLocation %>" class="form-control">
+                                        <div id="mapid" style="width: 500px; height: 400px;"></div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="title" class=" form-control-label">Title</label>
+                                        <input type="text" id="title" placeholder="" name="title" value="<%= data.title %>" class="form-control">
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="description" class=" form-control-label">Description</label>
+                                        <input type="text" id="description" placeholder="" name="description" value="<%= data.description %>" class="form-control">
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="title" class=" form-control-label">Price</label>
+                                        <input type="text" id="pricePerHour" placeholder="" name="pricePerHour" value="<%= data.pricePerHour %>" class="form-control">
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="estimatedTime" class=" form-control-label">Estimated Time</label>
+                                        <input type="text" id="estimatedTime" placeholder="" name="estimatedTime" value="<%= data.estimatedTime %>" class="form-control">
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="from" class=" form-control-label">From</label>
+                                        <input type="text" id="from" placeholder="" name="from" value="<%= data.time.from %>" class="form-control">
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="to" class=" form-control-label">TO</label>
+                                        <input type="text" id="to" placeholder="" name="to" value="<%= data.time.to %>" class="form-control">
+                                    </div>
+                                    
+                                     <div class="form-group">
+                                        <label for="tags" class=" form-control-label">Tags</label>
+                                        <input type="text" id="tags" placeholder="" name="tags" value="<%= data.tags %>" class="form-control">
+                                    </div>
+                                      <div class="form-group">
+                                        <label for="views" class=" form-control-label">Views</label>
+                                        <input type="text" id="views" placeholder="" name="views" value="<%= data.views %>" class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                    <label for="upload" class="form-control-label">Selet Pictures</label>
+                                    <input type="file" class="form-control" name="photo" id="photo" multiple >
+                                    </div>
+                                    <div class="form-group">
+                                    <input type="submit"  name="submit" class="btn btn-primary form-control rounded"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+               <div class="col-lg-5">
+                    <div class="card">
+                        <div class="card-header"><strong>Images</strong></div>
+                        <div class="card-body card-block">
+                                <div class="row">
+                                <% files.forEach(function(file){   %>
+                                    <div style="padding-right:15px; padding-bottom:15px">
+                                        <img src="uploads/<%= data._id%>/<%= file %>" height="250px" width="250px"/>
+                                        <div class="overlay" style="padding:5px"></div>
+                                        <div class="rounded btn btn-danger" onclick="remove('<%= data._id%>',  '<%= file %>')"> Remove</div>
+                                        <hr>
+                                    </div>
+                                   <% }); %>
+                                </div>
+                                <form action="/uploadImages?id=<%= data._id %>" method="POST" enctype="multipart/form-data">
+                                   <div class="form-group">
+                                   <input type="text" name="id" value="<%= data._id %>" hidden>
+                                    <label for="upload" class="form-control-label">Selet Pictures</label>
+                                    <input type="file" class="form-control" name="photo" id="photo" multiple >
+                                    </div>
+                                    <div class="form-group">
+                                    <input type="submit"  name="submit" class="btn btn-primary form-control rounded"/>
+                                </div>
+                                </form>
+                        </div>
+                    </div>
+               </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+        <!-- .animated -->
+    </div>
+    <!-- .content -->
+    
+    <!-- /#right-panel -->
+    <!-- Right Panel -->
+
+
+
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+   
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+
+    <script>
+
+
+     function remove(folderName, fileName){
+                
+                      jQuery.ajax({
+                                url: "http://localhost:3000/remove?p1="+folderName+"&p2="+fileName+"",
+                                type:"get",
+                               
+                                success: function(data) {
+                                    console.log('deleted successfully');
+                                    location.reload();
+                                },
+                                error: function(jqXHR, textStatus, errorThrown) {
+                                    console.log("error in deleting file");
+                                }
+                            });
+                                        }
+             
+        
+                    
+
+
+
+            jQuery(document).ready(function() {
+                    jQuery("#ima").change(function() {
+                        
+                        var el = jQuery(this) ;
+                    
+                        if(el.val() === "member" ) {
+                        jQuery("#type option").remove();
+                        jQuery("#type").append("<option selected disabled>--please select--</option>");
+                        jQuery("#type").append("<option value='private'>PRIVATE</option>");
+                        jQuery("#type").append("<option value='corporate'>CORPORATE</option>");
+                        }
+                        else if(el.val() === "artist" ) {
+                            jQuery("#type option").remove();
+                            jQuery("#type").append("<option>--please select--</option>"); 
+                            jQuery("#type").append("<option value='tattoo/artist'>TATTOO/ARTIST</option>");
+                            jQuery("#type").append("<option value='art/work'>ART/WORK</option>");
+                            jQuery("#type").append("<option value='body/modification'>BODY/MODIFICATION</option>");
+                            jQuery("#type").append("<option value='performance/artist'>PERFORMANCE/ARTIST</option>");
+                            jQuery("#type").append("<option value='model'>MODEL</option>");
+                        }
+                        else if(el.val() === "provider" ) {
+                        jQuery("#type option").remove();
+                        jQuery("#type").append("<option selected disabled>--please select--</option>");
+                        jQuery("#type").append("<option value='business'>BUSINESS</option>");
+                        jQuery("#type").append("<option value='venue'>VENUE</option>");
+                        jQuery("#type").append("<option value='supplier'>SUPPLIER </option>");
+                        }
+                    });
+        
+        
+                        var loca = <%- JSON.stringify(data) %> ;
+                        var loc = loca['geoLocation'];
+                        //alert('hai');
+                          var mymap = L.map('mapid').setView([0,0], 2);
+              
+                          L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                              maxZoom: 18,
+                              minZoom: 2,
+              
+                              id: 'mapbox.streets'
+                          }).addTo(mymap);
+              
+                          var popup = L.popup();
+                          //var locationn;
+                          
+                          var splitedLocation = loc.split(",");
+                          
+                          var theMarker= L.marker([loc[0], loc[1]]).addTo(mymap).bindPopup();
+              
+                          function onMapClick(e) {
+              
+                              lat = e.latlng.lat;
+                              lon = e.latlng.lng;
+              
+                              if (theMarker != undefined) {
+                                  mymap.removeLayer(theMarker);
+                              };
+                              /// mymap.removeLayer(theMarker);
+              
+                              theMarker = L.marker([lat, lon]).addTo(mymap).bindPopup();
+              
+                              jQuery('#geoLocation').val(lat + "," + lon);
+                              // $('#longitude').val(lon);
+              
+                          }
+              
+              
+                          mymap.on('click', onMapClick);
+                      });
+        
+           
+                  
+                  </script>
+        
+    </body>
+
+    </html>

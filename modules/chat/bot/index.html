@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script>
+        function chat(route) {
+            $.ajax({
+                url: 'http://localhost:5000/chat/' + route,
+                type: "GET",
+                success: function(d) {
+                    console.log(d);
+                    var block = document.getElementById('container')
+                    var messageCont = document.getElementById('messages')
+                    if (d.status === 1) {
+                        d.data.forEach(element => {
+                            if (element.input) {
+                                var elements = document.createElement('input')
+                                elements.placeholder = element.message
+                                element.type = 'text'
+                                element.class = 'inp'
+                                elements.id = 'toInput'
+                                block.append(elements)
+
+                                var but = document.createElement('button')
+                                but.innerHTML = 'Send'
+                                but.onclick = () => {
+                                    chat(element.code + '*' + (document.getElementById('toInput')).value)
+                                    block.innerHTML = ''
+                                }
+                                block.append(but)
+                            } else {
+                                var elements = document.createElement('button')
+                                elements.innerHTML = element.shortmessage
+                                elements.onclick = () => {
+                                    var mes = document.createElement('p')
+                                    mes.innerHTML = element.message
+                                    messageCont.append(mes)
+                                    block.innerHTML = ''
+                                    chat(element.code)
+                                }
+                                block.append(elements)
+                            }
+                        });
+                    } else if (d.status === 2) {
+                        var mes = document.createElement('p')
+                        mes.innerHTML = d.data
+                        messageCont.append(mes)
+                    }
+                },
+                error: function(data) {
+                    console.log(data)
+                }
+            });
+        }
+
+        function init() {
+            chat('init');
+        }
+    </script>
+
+
+    <style>
+        .inp {
+            width: 600px;
+            padding: 20px 20px;
+            margin: 10px 10px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 22px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            max-width: 200px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 10px;
+            margin: 10px 10px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body onload="init()">
+    <center><br><br>
+        <h2>Bot</h2><br><br>
+    </center>
+
+    <div id="messages"></div>
+
+    <div id="container"></div>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5d5a8bda1c9d440000d344b9"},"username":"Aiden Smith","user_email":"smith.aiden@gmail.com","user_verified":"yes","created_on":"04-Jan-2019","user_type":"Member"}
+{"_id":{"$oid":"5d5a8dd21c9d440000d344ba"},"username":"John Jacobs","user_email":"john.jacobs@hotmail.com","user_verified":"yes","created_on":"21-Jan-2019","user_type":"Artist"}
