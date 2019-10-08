@@ -42,23 +42,23 @@ module.exports = (app, artistData) => {
         // tags = req.body.tags;
         // title = req.body.title;
         id = req.body.id;
-        artistData.updateOne({ _id: mongoose.Types.ObjectId(id) }, { firstName, lastName, website, facebook, instagram }).
-        exec().then((data, err) => {
-            if (data === null) {
-                console.log(err);
+        artistData.updateOne({ _id: mongoose.Types.ObjectId(id) }, { firstName, lastName, website, facebook, instagram })
+            .then((data, err) => {
+                if (data === null) {
+                    console.log(err);
+                    res.status(400).json({
+                        code: 'failure'
+                    })
+                } else {
+                    res.status(200).json({
+                        code: 'success',
+                    });
+                }
+            }).catch(err => {
                 res.status(400).json({
                     code: 'failure'
                 })
-            } else {
-                res.status(200).json({
-                    code: 'success',
-                });
-            }
-        }).catch(err => {
-            res.status(400).json({
-                code: 'failure'
             })
-        })
     });
 
     app.delete('/deleteProfile', (req, res) => {
