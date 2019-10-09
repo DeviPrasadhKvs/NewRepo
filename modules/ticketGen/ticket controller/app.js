@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const initDB = require('./db')
 const axios = require('axios')
-const util = require('./utils/response')
+const apiResponse = require('./utils/response')
 var cors = require('cors')
 var email = require('./nodemailerfile')
 
@@ -14,7 +14,7 @@ var ticketController = require('./controller/ticketController');
 var customerQueryModel = require('./models/customerModel');
 var threadModel = require('./models/threadModel');
 
-ticketController(app, email, util, customerQueryModel, threadModel);
+ticketController(app, email, apiResponse, customerQueryModel, threadModel);
 
 initDB(() => {
     app.listen(4000, () => {

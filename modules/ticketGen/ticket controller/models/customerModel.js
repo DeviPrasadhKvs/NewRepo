@@ -2,32 +2,27 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const customerQuerySchema = new Schema({
-    profileId: {
+
+    profileID: {
         type: String,
-        required: true
+    },
+    issueID: {
+        type: String,
     },
     name: {
         type: String,
-        required: true
+    },
+    email: {
+        type: String,
+        // unique: true
     },
     query: {
         type: String,
         required: true
     },
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    issueId: {
-        type: String
-    },
     status: {
         type: String,
-        required: true
     }
 })
 
-const customerQueries = mongoose.model('customerQueries', customerQuerySchema)
-
-module.exports = customerQueries
+module.exports = mongoose.model('customerQueries', customerQuerySchema)

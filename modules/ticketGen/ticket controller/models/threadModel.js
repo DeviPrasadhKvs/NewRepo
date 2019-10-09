@@ -14,6 +14,4 @@ const threadSchema = new Schema({
     }],
 })
 
-const thread = mongoose.model('ticketThreads', threadSchema)
-
-module.exports = thread
+module.exports = mongoose.model('ticketThreads', threadSchema)
