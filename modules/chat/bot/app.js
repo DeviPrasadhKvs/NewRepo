@@ -3,8 +3,11 @@ const express = require('express')
 const app = express();
 let cors = require('cors')
 const initDB = require('./db')
+var bodyParser = require('body-parser');
 
+app.set('view engine', 'ejs');
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({ origin: true }));
 
@@ -15,7 +18,7 @@ var chatMessagesDb = require('./models/chatMessages')
 chatController(app, chatFlowDb, chatMessagesDb)
 
 initDB(() => {
-    app.listen(5000, (err, res) => {
+    app.listen(3000, (err, res) => {
         console.log('Connected');
     })
 

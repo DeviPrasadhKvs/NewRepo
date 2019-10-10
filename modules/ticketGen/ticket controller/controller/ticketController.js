@@ -1,4 +1,4 @@
-module.exports = (app, email, senddata, apiResponse, customerQueryModel, threadModel) => {
+module.exports = (app, apiResponse, customerQueryModel, threadModel) => {
 
     app.post('/query', function(req, res) {
         customerData = new customerQueryModel();
@@ -20,7 +20,7 @@ module.exports = (app, email, senddata, apiResponse, customerQueryModel, threadM
         })
     })
 
-    app.get('/customerQueries', function(req, res) {
+    app.get('/customerQuery', function(req, res) {
         customerQueryModel.find().then(data => {
             return res.status(200).send(apiResponse.sendReply(1, 'Successful', data))
         }).catch(error => {
@@ -28,7 +28,7 @@ module.exports = (app, email, senddata, apiResponse, customerQueryModel, threadM
         })
     })
 
-    app.get('/customerQueries/:profileID', function(req, res) {
+    app.get('/customerQuery/:profileID', function(req, res) {
         console.log(req.params.profileID)
         customerQueryModel.find({ profileID: req.params.profileID }).then(data => {
             return res.status(200).send(apiResponse.sendReply(1, 'Successful', data))

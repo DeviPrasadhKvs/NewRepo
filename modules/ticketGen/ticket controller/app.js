@@ -14,7 +14,7 @@ var ticketController = require('./controller/ticketController');
 var customerQueryModel = require('./models/customerModel');
 var threadModel = require('./models/threadModel');
 
-ticketController(app, email, apiResponse, customerQueryModel, threadModel);
+ticketController(app, apiResponse, customerQueryModel, threadModel);
 
 initDB(() => {
     app.listen(4000, () => {

@@ -5,6 +5,7 @@ const customerQuerySchema = new Schema({
 
     profileID: {
         type: String,
+        required: true
     },
     issueID: {
         type: String,
@@ -14,7 +15,7 @@ const customerQuerySchema = new Schema({
     },
     email: {
         type: String,
-        // unique: true
+        required: true
     },
     query: {
         type: String,
@@ -25,4 +26,6 @@ const customerQuerySchema = new Schema({
     }
 })
 
-module.exports = mongoose.model('customerQueries', customerQuerySchema)
+var customerQueryModel = mongoose.model('customerQueries', customerQuerySchema)
+
+module.exports = customerQueryModel;
