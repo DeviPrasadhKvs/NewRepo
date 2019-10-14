@@ -12,34 +12,34 @@ module.exports = (app, chatFlowDb, chatMessagesDb) => {
         var cMessages = new chatMessagesDb();
 
         cFlow.contentCode = req.body.contentCode;
-        cFlow.flow = req.body.flow;
+        cFlow.flow = req.body.flow.split(',');
 
         cMessages.contentCode = req.body.contentCode;
-        cMessages.input = req.body.input;
         cMessages.message = req.body.message;
         cMessages.shortMessage = req.body.shortMessage;
 
-        cFlow.save().then((data) => {
-            res.status(200).json({
-                code: 'success',
-                data: data
-            });
+        cFlow.save().then((fdata) => {
+            // res.status(200).json({
+            //     code: 'success',
+            //     data: data
+            // });
+            cMessages.save().then((data) => {
+                res.send({
+                    code: 'success',
+                    data: [data, fdata]
+                })
+            }).catch(err => {
+                res.send(400).json({
+                    code: 'failure'
+                })
+            })
         }).catch(err => {
             res.status(400).json({
                 code: 'failure'
             })
         })
 
-        cMessages.save().then((data) => {
-            res.status(200).json({
-                code: 'success',
-                data: data
-            });
-        }).catch(err => {
-            res.status(400).json({
-                code: 'failure'
-            })
-        })
+
         res.render('index1')
     });
 
@@ -56,7 +56,7 @@ module.exports = (app, chatFlowDb, chatMessagesDb) => {
             res.send({ status: 2, data: splitData })
         } else {
             if (value === 'init') {
-                chatFlowDb.findOne({ contentCode: 'ABB' }).then((data) => {
+                chatFlowDb.findOne({ contentCode: 'A00' }).then((data) => {
                         var d = data.flow
                         chatMessagesDb.find({ contentCode: { $in: d } }).then((d) => {
                             res.send({ status: 1, data: data, data1: d })

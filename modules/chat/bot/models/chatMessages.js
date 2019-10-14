@@ -3,18 +3,14 @@ const Schema = mongoose.Schema;
 
 const chatMessagesDbModel = new Schema({
 
-    contentCode:{
-        type:String
+    contentCode: {
+        type: String
     },
-    input:{
-        type:Boolean,
-        default:false
+    message: {
+        type: String
     },
-    message:{
-        type:String
-    },
-    shortMessage:{
-        type:String
+    shortMessage: {
+        type: String
     }
 });
 

@@ -7,14 +7,14 @@
     <script>
         function chat(route) {
             $.ajax({
-                url: 'http://localhost:5000/chat/' + route,
+                url: 'http://localhost:3000/chat/' + route,
                 type: "GET",
                 success: function(d) {
                     console.log(d);
                     var block = document.getElementById('container')
                     var messageCont = document.getElementById('messages')
                     if (d.status === 1) {
-                        d.data.forEach(element => {
+                        d.data1.forEach(element => {
                             if (element.input) {
                                 var elements = document.createElement('input')
                                 elements.placeholder = element.message
@@ -32,13 +32,13 @@
                                 block.append(but)
                             } else {
                                 var elements = document.createElement('button')
-                                elements.innerHTML = element.shortmessage
+                                elements.innerHTML = element.shortMessage
                                 elements.onclick = () => {
                                     var mes = document.createElement('p')
                                     mes.innerHTML = element.message
                                     messageCont.append(mes)
                                     block.innerHTML = ''
-                                    chat(element.code)
+                                    chat(element.contentCode)
                                 }
                                 block.append(elements)
                             }
