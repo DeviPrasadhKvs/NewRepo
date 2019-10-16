@@ -22,7 +22,7 @@ module.exports = (app, checkDb) => {
 
     app.get('/fetch/:id/', (req, res) => {
         // console.log(req.query);
-        var profileId = req.params.id
+        var profileId = req.params.profileId
         checkDb.findOne({ profileId: profileId }).then((data, err) => {
             if (data != null) {
                 res.send(data)
@@ -80,7 +80,7 @@ module.exports = (app, checkDb) => {
     })
 
     app.post('/new', (req, res) => {
-        console.log(req.params);
+        console.log(req.body);
         var verification = new checkDb();
         verification.profileId = req.body.profileId;
         verification.profileImage = req.body.profileImage;

@@ -19,30 +19,27 @@ module.exports = (app, chatFlowDb, chatMessagesDb) => {
         cMessages.shortMessage = req.body.shortMessage;
 
         cFlow.save().then((fdata) => {
-            // res.status(200).json({
-            //     code: 'success',
-            //     data: data
-            // });
-            cMessages.save().then((data) => {
-                res.send({
-                    code: 'success',
-                    data: [data, fdata]
+                // res.status(200).json({
+                //     code: 'success',
+                //     data: data
+                // });
+                cMessages.save().then((data) => {
+                    res.send({
+                        code: 'success',
+                        data: [data, fdata]
+                    })
+                }).catch(err => {
+                    res.send(400).json({
+                        code: 'failure'
+                    })
                 })
             }).catch(err => {
-                res.send(400).json({
+                res.status(400).json({
                     code: 'failure'
                 })
             })
-        }).catch(err => {
-            res.status(400).json({
-                code: 'failure'
-            })
-        })
-
-
-        res.render('index1')
+            // res.render('index1')
     });
-
     // app.get('/index', function(req, res) {
     //     res.render('index1')
     // });

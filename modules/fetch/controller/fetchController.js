@@ -4,7 +4,7 @@ module.exports = (app, fetchData) => {
     app.get('/retrieve', (req, res) => {
         // console.log(req.query);
         var id = req.query.id
-        fetchData.findOne({ _id:id }).then((data, err) => {
+        fetchData.findOne({ _id: id }).then((data, err) => {
             if (data != null) {
                 res.send(data)
             } else {
@@ -27,24 +27,24 @@ module.exports = (app, fetchData) => {
         text = req.body.text;
         styles = req.body.styles;
 
-        fetchData.updateOne({ _id: id}, {name, position, url, text, styles}).
-        exec().then((data, err) => {
-            if (data === null) {
+        fetchData.updateOne({ _id: id }, { name, position, url, text, styles })
+            .then((data, err) => {
+                if (data === null) {
+                    console.log(err);
+                    res.status(400).json({
+                        code: 'failure'
+                    })
+                } else {
+                    res.status(200).json({
+                        code: 'success',
+                    });
+                }
+            }).catch(err => {
                 console.log(err);
                 res.status(400).json({
                     code: 'failure'
                 })
-            } else {
-                res.status(200).json({
-                    code: 'success',
-                });
-            }
-        }).catch(err => {
-            console.log(err);
-            res.status(400).json({
-                code: 'failure'
             })
-        })
     });
 
     app.delete('/delete', (req, res) => {
@@ -54,7 +54,7 @@ module.exports = (app, fetchData) => {
             if (!err) {
                 console.log(result);
             }
-            
+
         });
     });
 
@@ -67,7 +67,7 @@ module.exports = (app, fetchData) => {
         fetch.position = req.body.position;
         fetch.url = req.body.url;
         fetch.text = req.body.text;
-        fetch.styles = req.body.styles; 
+        fetch.styles = req.body.styles;
         fetch.save().then((data) => {
             res.status(200).json({
                 code: 'success',

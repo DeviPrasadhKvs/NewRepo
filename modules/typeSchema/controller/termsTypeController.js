@@ -2,21 +2,21 @@ module.exports = (app, termsTypeModel) => {
 
     app.post('/newterms/', (req, res) => {
         var terms = new termsTypeModel();
+        var questions = {}
         terms.termsType = req.body.termsType;
-        var questions = {
-            fieldID: req.body.fieldID,
-            displayName: req.body.displayName,
-            inputType: req.body.inputType,
-            options: req.body.options
-        };
+        terms.fieldID = req.body.fieldID,
+            terms.displayName = req.body.displayName,
+            terms.inputType = req.body.inputType,
+            terms.options = req.body.options
+        terms.termsText = req.body.termsText;
+
         // termsTypeModel.questions.push(questions);
         // terms.questions = req.body.questions;
         // terms.fieldID = req.body.fieldID
         // terms.displayName = req.body.displayName;
         // terms.inputType = req.body.inputType;
         // terms.options = req.body.options;
-        terms.termsText = req.body.termsText;
-        termsTypeModel.findOneAndUpdate({ $push: { questions: questions } }).then(data, err => {
+        termsTypeModel.findOneAndUpdate({ $push: { questions: terms } }).then(data, err => {
             if (data === null) {
                 console.log(err);
                 res.status(400).json({
